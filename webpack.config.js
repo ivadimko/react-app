@@ -1,7 +1,9 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ModernizrWebpackPlugin = require('modernizr-webpack-plugin');
 const postCssConfig = require('./config/postcss.config');
+const modernizrConfig = require('./config/modernizr.config');
 
 const context = path.resolve(__dirname, 'src');
 const htmlPlugin = new HtmlWebpackPlugin({
@@ -9,6 +11,7 @@ const htmlPlugin = new HtmlWebpackPlugin({
   filename: "./index.html"
 });
 const cssPlugin = new ExtractTextPlugin('css/[name].css');
+const modernizrPlugin = new ModernizrWebpackPlugin(modernizrConfig);
 
 
 module.exports = {
@@ -53,7 +56,7 @@ module.exports = {
       }
     ]
   },
-  plugins: [ htmlPlugin, cssPlugin ],
+  plugins: [ htmlPlugin, cssPlugin, modernizrPlugin ],
   resolve: {
     extensions: [ ".js", ".jsx" ],
     alias: {
