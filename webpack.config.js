@@ -50,7 +50,16 @@ module.exports = {
                 sourceMap: true,
                 sourceComments: true
               }
-            }
+            },
+            {
+              loader: 'sass-resources-loader',
+              options: {
+                resources: [
+                  path.join(__dirname, 'src/styles/utils/_vars.scss'),
+                  path.join(__dirname, 'src/styles/utils/_mixins.scss')
+                ]
+              },
+            },
           ]
         })
       }
