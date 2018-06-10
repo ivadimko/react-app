@@ -52,10 +52,17 @@
     "foundation-sites": "^6.4.4-rc1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "stylelint-declaration-use-variable": "^1.6.1",
     "webfontloader": "^1.6.28"
   },
   "lint-staged": {
-    "*.scss": ["stylelint --fix", "git add"],
-    "*.js": ["eslint --fix", "git add"]
+    "*.scss": [
+      "stylelint --fix",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
