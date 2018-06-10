@@ -126,6 +126,14 @@
   }
 }
 
+@mixin hover($property, $to-value) {
+  transition: $property $duration $easing;
+
+  &:hover {
+    #{$property}: $to-value;
+  }
+}
+
 @mixin webkit-smoothscroll {
   overflow: hidden;
   overflow-y: scroll;
@@ -200,4 +208,10 @@
   &.placeholder { @content; }
   &:-moz-placeholder { @content; }
   &:-ms-input-placeholder { @content; }
+}
+
+@mixin webkit-smoothscroll {
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }

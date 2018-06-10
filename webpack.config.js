@@ -13,6 +13,8 @@ const htmlPlugin = new HtmlWebpackPlugin({
 const cssPlugin = new ExtractTextPlugin('css/[name].css');
 const modernizrPlugin = new ModernizrWebpackPlugin(modernizrConfig);
 
+const scssUtilsPath = 'src/styles/utils';
+
 
 module.exports = {
   module: {
@@ -55,8 +57,8 @@ module.exports = {
               loader: 'sass-resources-loader',
               options: {
                 resources: [
-                  path.join(__dirname, 'src/styles/utils/_vars.scss'),
-                  path.join(__dirname, 'src/styles/utils/_mixins.scss')
+                  path.join(__dirname, `${scssUtilsPath}/_vars.scss`),
+                  path.join(__dirname, `${scssUtilsPath}/_mixins.scss`)
                 ]
               },
             },

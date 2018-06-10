@@ -9,7 +9,8 @@ module.exports = {
   "rules": {
     "no-param-reassign": 0,
     "no-new": 0,
-    "import/no-unresolved": "off"
+    "import/no-unresolved": "off",
+    "import/extensions": "never"
   },
   "settings": {
     "import/resolver": {

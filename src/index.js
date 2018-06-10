@@ -1,6 +1,9 @@
+import '@/styles/main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '@/styles/main.scss';
-import App from './components/app';
+import loadFonts from '@/scripts/utils/loadfonts';
+import App from '@/components/app';
 
-ReactDOM.render(<App />, document.getElementById('index'));
+loadFonts(['Prata:400:latin', 'Montserrat:300,400,700:latin']);
+
+ReactDOM.render(<App />, document.querySelector('#app'));
