@@ -12,6 +12,7 @@ export default class App extends Component {
         <div className="grid-x grid-margin-x">
           <div className="cell">
             <h1>{this.message}</h1>
+            <p>This is a simple react-app template</p>
           </div>
         </div>
       </div>
