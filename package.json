@@ -11,8 +11,9 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "lint": "./node_modules/.bin/stylelint src/**/*.scss --fix && ./node_modules/.bin/eslint src --fix",
-    "deploy": "gh-pages-deploy -- 'deploy'"
+    "lint-fix": "./node_modules/.bin/stylelint src/**/*.scss --fix && ./node_modules/.bin/eslint src --fix",
+    "deploy": "gh-pages-deploy -- 'deploy'",
+    "precommit": "lint-staged"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -53,10 +54,8 @@
     "react-dom": "^16.4.0",
     "webfontloader": "^1.6.28"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "npm test"
-    }
+  "lint-staged": {
+    "*.scss": ["stylelint --fix", "git add"],
+    "*.js": ["eslint --fix", "git add"]
   }
 }
