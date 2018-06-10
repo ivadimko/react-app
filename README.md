@@ -6,7 +6,7 @@ Boilerplate for react application
 
 `build` - build for production
 
-`lint` - check & fix JS + SCSS
+`lint-fix` - check & fix JS + SCSS
 
 `deploy` - deploy 'dist' folder to GH pages
 
