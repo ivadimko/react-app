@@ -5,7 +5,16 @@ export default class App extends Component {
     super();
     this.message = 'Hello React';
   }
+
   render() {
-    return <h1>{this.message}</h1>;
+    return <div className={'page'}>
+      <div className={'grid-container'}>
+        <div className="grid-x grid-margin-x">
+          <div className="cell">
+            <h1>{this.message}</h1>
+          </div>
+        </div>
+      </div>
+    </div>;
   }
 }
