@@ -10,7 +10,7 @@ const htmlPlugin = new HtmlWebpackPlugin({
   template: "./src/index.html",
   filename: "./index.html"
 });
-const cssPlugin = new ExtractTextPlugin('css/[name].[chunkhash].css');
+const cssPlugin = new ExtractTextPlugin('css/[name].[hash].css');
 const modernizrPlugin = new ModernizrWebpackPlugin(modernizrConfig);
 
 const scssUtilsPath = 'src/styles/utils';
